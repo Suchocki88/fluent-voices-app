@@ -367,8 +367,9 @@ export default function HomePage(): ReactNode {
               one’s own is not.
             </blockquote>
             <p>
-              Fluent Voices is where writers can meet that change together, without
-              giving up the reasons they started writing in the first place.
+              The tools will keep changing. At the heart of every story is a human
+              experience, and finding the means to polish that story until it shines is
+              what the circles are for.
             </p>
           </div>
         </section>
@@ -460,6 +461,10 @@ export default function HomePage(): ReactNode {
                 Every circle will have a convener — someone who keeps the standing time
                 and opens the room. If you would like to convene one of your own, say so
                 and we will help you start it.
+              </p>
+              <p className="join-support">
+                Fluent Voices is free to join. It is supported by Conceptual Academy, the
+                public benefit corporation behind the AI-Ed program.
               </p>
             </div>
 

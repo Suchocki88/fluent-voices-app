@@ -712,6 +712,14 @@ a {
   color: var(--clay);
 }
 
+.join-support {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
 .join-art {
   position: relative;
   display: grid;
