@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { ReactNode } from 'react';
 
 /* ---------------------------------------------------------------
@@ -15,12 +16,42 @@ const agenda = [
 ];
 
 const circle = {
-  name: 'Open Genre — the first circle',
+  name: 'How a circle runs',
   when: 'Second Thursday',
   time: '7:00 – 8:30 PM Mountain',
-  convener: 'Convened by John Suchocki',
+  convener: 'The first circle convenes in 2026',
   seats: 'Six writers maximum',
 };
+
+const programBooks = [
+  {
+    src: '/images/UAIVol1Cover605.jpg',
+    alt: 'Understanding and Working with AI, Volume 1: Foundations and Practice',
+    title: 'Volume 1',
+    subtitle: 'Foundations and Practice',
+  },
+  {
+    src: '/images/UAIVol2Cover605.jpg',
+    alt: 'Understanding and Working with AI, Volume 2: Society and the Future',
+    title: 'Volume 2',
+    subtitle: 'Society and the Future',
+  },
+];
+
+const novels = [
+  {
+    src: '/images/ThresholdHi.jpg',
+    alt: 'The Threshold, a novel by John Suchocki and Claude',
+    title: 'The Threshold',
+    subtitle: 'The Future of AI and Humanity',
+  },
+  {
+    src: '/images/NeolithicHi.jpg',
+    alt: 'The Neolithic, a novel by John Suchocki and Claude',
+    title: 'The Neolithic',
+    subtitle: 'Echoes of Our Origins',
+  },
+];
 
 const tickerWords = [
   'Craft',
@@ -36,7 +67,7 @@ const stages = [
     number: '01',
     title: 'You join a circle',
     body: [
-      'Six to eight writers, grouped by genre, meeting once a month online. You bring one thing you are stuck on — the scene that will not work, the character who has gone flat, the ending you cannot find.',
+      'Six writers, grouped by genre, meeting once a month online. You bring one thing you are stuck on — the scene that will not work, the character who has gone flat, the ending you cannot find.',
       'No pages required. Most months, talking the problem through is the work.',
     ],
   },
@@ -182,6 +213,7 @@ export default function HomePage(): ReactNode {
             <a href="#why">Why</a>
             <a href="#meetings">Meetings</a>
             <a href="#arc">What happens</a>
+            <a href="#origin">The books</a>
             <a href="#join">Join</a>
           </nav>
         </div>
@@ -336,6 +368,66 @@ export default function HomePage(): ReactNode {
           </div>
         </section>
 
+        <section className="origin-section" id="origin">
+          <p className="origin-plate">
+            From Conceptual Academy, publishers of
+            <em>Understanding and Working with AI</em>
+          </p>
+
+          <div className="section">
+            <div className="section-heading">
+              <p className="section-kicker">Origins</p>
+              <div>
+                <h2 className="section-title">The books behind the circles.</h2>
+                <p className="section-lede">
+                  Fluent Voices grew out of a two-volume program that asks its readers to
+                  finish something — and out of two novels written to find out whether the
+                  method held up.
+                </p>
+              </div>
+            </div>
+
+            <div className="shelf-grid">
+              <div className="shelf-group">
+                <p className="shelf-label">The program</p>
+                <ul className="covers">
+                  {programBooks.map((book) => (
+                    <li key={book.title}>
+                      <span className="cover-frame">
+                        <img src={book.src} alt={book.alt} />
+                      </span>
+                      <p className="cover-title">{book.title}</p>
+                      <p className="cover-subtitle">{book.subtitle}</p>
+                    </li>
+                  ))}
+                </ul>
+                <p className="shelf-note">
+                  Volume 2 closes by inviting adult readers here, manuscript in hand.
+                </p>
+              </div>
+
+              <div className="shelf-group">
+                <p className="shelf-label">Where it started</p>
+                <ul className="covers">
+                  {novels.map((book) => (
+                    <li key={book.title}>
+                      <span className="cover-frame">
+                        <img src={book.src} alt={book.alt} />
+                      </span>
+                      <p className="cover-title">{book.title}</p>
+                      <p className="cover-subtitle">{book.subtitle}</p>
+                    </li>
+                  ))}
+                </ul>
+                <p className="shelf-note">
+                  Two novels written to test whether the work would hold — and the reason
+                  the circles exist at all.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="join-section" id="join">
           <div className="join-card">
             <div className="join-copy">
@@ -350,7 +442,7 @@ export default function HomePage(): ReactNode {
 
               <a
                 className="button primary"
-                href="mailto:hello@example.com?subject=Fluent%20Voices%20—%20joining%20a%20circle"
+                href="mailto:John@ConceptualAcademy.com?subject=Fluent%20Voices%20—%20joining%20a%20circle"
               >
                 Join the circle
               </a>
@@ -380,14 +472,26 @@ export default function HomePage(): ReactNode {
           <div>
             <p className="footer-brand">FLUENT VOICES</p>
             <p className="footer-copy">Writing Circles for a Changing Craft</p>
+            <p className="footer-origin">
+              From Conceptual Academy, publishers of{' '}
+              <em>Understanding and Working with AI</em>.
+            </p>
           </div>
 
-          <nav className="footer-links" aria-label="Footer">
-            <a href="#why">Why</a>
-            <a href="#meetings">Meetings</a>
-            <a href="#arc">What happens</a>
-            <a href="#join">Join</a>
-          </nav>
+          <div className="footer-right">
+            <img
+              className="footer-logo"
+              src="/images/Logo1200Horizontal.png"
+              alt="Conceptual Academy"
+            />
+            <nav className="footer-links" aria-label="Footer">
+              <a href="#why">Why</a>
+              <a href="#meetings">Meetings</a>
+              <a href="#arc">What happens</a>
+              <a href="#origin">The books</a>
+              <a href="#join">Join</a>
+            </nav>
+          </div>
         </div>
       </footer>
     </>
