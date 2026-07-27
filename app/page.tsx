@@ -246,6 +246,11 @@ export default function HomePage(): ReactNode {
                 See what happens
               </a>
             </div>
+
+            <p className="status-note">
+              Fluent Voices is being built now. The first circles convene in 2026, and
+              this page describes how they will run.
+            </p>
           </div>
 
           <aside className="session-card" aria-labelledby="session-heading">
@@ -452,9 +457,9 @@ export default function HomePage(): ReactNode {
                 are working on something, you belong here.
               </p>
               <p>
-                Only circles with a convener are listed, so every meeting on this page is
-                a meeting that will happen. If you would like to convene one of your own,
-                say so and we will help you start it.
+                Every circle will have a convener — someone who keeps the standing time
+                and opens the room. If you would like to convene one of your own, say so
+                and we will help you start it.
               </p>
             </div>
 
