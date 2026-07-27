@@ -43,6 +43,18 @@ a {
   text-decoration: none;
 }
 
+.inline-link {
+  color: var(--clay);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.inline-link:hover {
+  color: var(--ink);
+}
+
 :focus-visible {
   outline: 2px solid var(--clay);
   outline-offset: 3px;

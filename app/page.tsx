@@ -408,7 +408,10 @@ export default function HomePage(): ReactNode {
                   ))}
                 </ul>
                 <p className="shelf-note">
-                  Volume 2 closes by inviting adult readers here, manuscript in hand.
+                  Volume 2 closes by inviting adult readers here, manuscript in hand.{' '}
+                  <a className="inline-link" href="https://understandingai.ai">
+                    See the program at UnderstandingAI.ai
+                  </a>
                 </p>
               </div>
 
@@ -484,7 +487,10 @@ export default function HomePage(): ReactNode {
             <p className="footer-copy">Writing Circles for a Changing Craft</p>
             <p className="footer-origin">
               From Conceptual Academy, publishers of{' '}
-              <em>Understanding and Working with AI</em>.
+              <a className="inline-link" href="https://understandingai.ai">
+                <em>Understanding and Working with AI</em>
+              </a>
+              .
             </p>
           </div>
 
