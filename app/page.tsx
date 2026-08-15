@@ -324,6 +324,41 @@ export default function HomePage(): ReactNode {
           </div>
         </section>
 
+        <section className="section" id="near-you">
+          <div className="section-heading">
+            <p className="section-kicker">Find your circle</p>
+            <div>
+              <h2 className="section-title">There may already be one near you.</h2>
+              <p className="section-lede">
+                Writing circles are more common than most people realize — a great many
+                public libraries quietly host one already. Often the best circle is the
+                closest one.
+              </p>
+            </div>
+          </div>
+
+          <div className="intro-copy">
+            <p className="dropcap">
+              Before you wait on us, ask at your local library. Many run a writers’ group,
+              a writers’ café, or a critique circle — in Colorado alone we have found dozens
+              meeting in public libraries. Look through your library’s events calendar, or
+              simply ask a librarian. If there is one that fits, go: in person and down the
+              street beats anything we can offer online.
+            </p>
+            <p>
+              And if there is nothing near you — nothing in your genre, nothing that fits
+              your schedule, or nowhere that meets online — that is exactly what Fluent
+              Voices is for. Join one of our circles when they convene, or start your own.
+              You do not need to already have a group; you only need to open the room, and
+              we will help you do it.
+            </p>
+            <div className="hero-actions">
+              <a className="button primary" href="#join">Start or join a circle</a>
+              <a className="button secondary" href="#arc">See how a circle runs</a>
+            </div>
+          </div>
+        </section>
+
         <section className="arc-section" id="arc">
           <div className="section">
             <div className="section-heading">
