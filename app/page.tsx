@@ -1,6 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import type { ReactNode } from 'react';
 
+// Waitlist form. TODO: swap for a dedicated Fluent Voices waitlist form
+// (fields: name, email, town or ZIP, genre, “could you convene a circle?”,
+//  online / in-person, and what you are working on).
+const WAITLIST_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfmC3t1awl9T0Ed1JZhtW24XEvp0znPoIITpbwcY7WvqYm12Q/viewform?usp=header';
+
 /* ---------------------------------------------------------------
    Content
    --------------------------------------------------------------- */
@@ -90,9 +96,9 @@ const stages = [
 ];
 
 const joinSteps = [
-  'Pick a circle whose standing time you can actually make.',
-  'We send you the meeting link a few days beforehand.',
-  'You come once and decide whether it is for you.',
+  'Tell us what you are working on and when you could meet.',
+  'We email you as circles form for 2026 — starting with any near you.',
+  'You decide then whether it is for you.',
 ];
 
 /* ---------------------------------------------------------------
@@ -203,7 +209,7 @@ export default function HomePage(): ReactNode {
             <p className="edition-note">Monthly · Online · Small groups</p>
             <p className="brand">FLUENT VOICES</p>
             <a className="masthead-action" href="#join">
-              Join the circle
+              Add me to the list
             </a>
           </div>
 
@@ -240,7 +246,7 @@ export default function HomePage(): ReactNode {
 
             <div className="hero-actions">
               <a className="button primary" href="#join">
-                Join the circle
+                Add me to the list
               </a>
               <a className="button secondary" href="#arc">
                 See what happens
@@ -353,7 +359,7 @@ export default function HomePage(): ReactNode {
               we will help you do it.
             </p>
             <div className="hero-actions">
-              <a className="button primary" href="#join">Start or join a circle</a>
+              <a className="button primary" href="#join">Add me to the list</a>
               <a className="button secondary" href="#arc">See how a circle runs</a>
             </div>
           </div>
@@ -486,11 +492,18 @@ export default function HomePage(): ReactNode {
 
               <a
                 className="button primary"
-                href="mailto:John@ConceptualAcademy.com?subject=Fluent%20Voices%20—%20joining%20a%20circle"
+                href={WAITLIST_URL}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Join the circle
+                Add me to the list
               </a>
 
+              <p className="status-note">
+                We are not running yet — the first circles form in 2026. Add your name and
+                we will reach out as they take shape near you, and let you know if there is
+                already one nearby.
+              </p>
               <p>
                 No writing sample, no publication history, no finished manuscript. If you
                 are working on something, you belong here.
