@@ -22,7 +22,7 @@ const agenda = [
 ];
 
 const circle = {
-  name: 'How a circle runs',
+  name: 'How a circle will run',
   when: 'Second Thursday',
   time: '7:00 – 8:30 PM Mountain',
   convener: 'The first circle convenes in 2026',
@@ -89,7 +89,7 @@ const stages = [
     number: '03',
     title: 'Your finished book meets readers',
     body: [
-      'When a member finishes, we arrange a reading — a book club takes on the book, and the author joins for the final session to answer whatever comes up.',
+      'When a member finishes, we will arrange a reading — a book club takes on the book, and the author joins the final session to answer whatever comes up.',
       'A dozen people who read the whole thing and arrived with questions. Most first-time authors never get that once.',
     ],
   },
@@ -239,9 +239,9 @@ export default function HomePage(): ReactNode {
             </h2>
 
             <p className="hero-copy">
-              Once a month, six writers sit down together and work through what each of
-              them is stuck on. Same day, same time, someone always opens the room. That
-              is the whole idea — everything else grows out of that meeting.
+              The idea is simple. Once a month, six writers sit down together and work
+              through what each of them is stuck on. Same day, same time, someone opens
+              the room. Everything else grows from that meeting.
             </p>
 
             <div className="hero-actions">
@@ -254,8 +254,9 @@ export default function HomePage(): ReactNode {
             </div>
 
             <p className="status-note">
-              Fluent Voices is being built now. The first circles convene in 2026, and
-              this page describes how they will run.
+              Fluent Voices is being built now — the first circles convene in 2026, and
+              this page describes how they will run. Add your name to help start one near
+              you.
             </p>
           </div>
 
@@ -314,13 +315,13 @@ export default function HomePage(): ReactNode {
 
             <div className="intro-copy">
               <p className="dropcap">
-                Some of our members are finally starting the book they have been
-                imagining for thirty years. Others are on their third, or deep in a
+                Fluent Voices is for the writer finally starting the book they have
+                imagined for thirty years — and for the one on their third, deep in a
                 revision, or trying to work out what the trade even looks like now.
               </p>
               <p>
-                What they have in common is the bug — the thing where you cannot not
-                write, and you need to talk to someone who understands that without
+                What such writers have in common is the bug — the thing where you cannot
+                not write, and you need to talk to someone who understands that without
                 requiring an explanation.
               </p>
               <blockquote className="pullquote">
@@ -354,9 +355,9 @@ export default function HomePage(): ReactNode {
             <p>
               And if there is nothing near you — nothing in your genre, nothing that fits
               your schedule, or nowhere that meets online — that is exactly what Fluent
-              Voices is for. Join one of our circles when they convene, or start your own.
-              You do not need to already have a group; you only need to open the room, and
-              we will help you do it.
+              Voices is being built for. Add your name for a circle as they form, or offer
+              to start your own. You do not need to already have a group; you only need to
+              open the room, and we will help you do it.
             </p>
             <div className="hero-actions">
               <a className="button primary" href="#join">Add me to the list</a>
@@ -370,10 +371,10 @@ export default function HomePage(): ReactNode {
             <div className="section-heading">
               <p className="section-kicker">What happens</p>
               <div>
-                <h2 className="section-title">A member’s first year, roughly.</h2>
+                <h2 className="section-title">Your first year, roughly.</h2>
                 <p className="section-lede">
-                  These come in order. Most people spend a long time in the first one,
-                  and that is the point.
+                  These come in order. The idea is that you spend a long time in the first
+                  one — and that is the point.
                 </p>
               </div>
             </div>
@@ -394,9 +395,9 @@ export default function HomePage(): ReactNode {
             </ol>
 
             <p className="arc-note">
-              Members can also add a finished book to the guild’s reading list, which is
-              how book clubs find work to take on. It is a list, not a storefront —
-              sharing is optional, and you keep every right to your own work.
+              You can also add a finished book to the guild’s reading list, which is how
+              book clubs find work to take on. It is a list, not a storefront — sharing is
+              optional, and you keep every right to your own work.
             </p>
           </div>
         </section>
@@ -500,9 +501,10 @@ export default function HomePage(): ReactNode {
               </a>
 
               <p className="status-note">
-                We are not running yet — the first circles form in 2026. Add your name and
-                we will reach out as they take shape near you, and let you know if there is
-                already one nearby.
+                Fluent Voices is just getting started — the first circles form in 2026.
+                Add your name, and you will be among the first we reach out to as circles
+                take shape near you. We will also tell you if there is already one nearby.
+                Early voices help shape what this becomes.
               </p>
               <p>
                 No writing sample, no publication history, no finished manuscript. If you
