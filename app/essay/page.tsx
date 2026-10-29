@@ -1,3 +1,6 @@
+
+    
+  
 import type { ReactNode } from 'react';
 
 export default function EssayPage(): ReactNode {
@@ -25,7 +28,7 @@ export default function EssayPage(): ReactNode {
           <div className="section-heading">
             <p className="section-kicker">Why Fluent Voices exists</p>
             <div>
-              <h1 className="section-title" id="essay-title">The Work Is Not the Whole Story</h1>
+              <h1 className="section-title" id="essay-title" style={{ fontSize: "clamp(2.1rem, 4vw, 3.7rem)", lineHeight: 1.12 }}>The Work Is Not the Whole Story</h1>
               <p className="section-lede">AI, human imagination, and why writers still need readers</p>
             </div>
           </div>
@@ -54,3 +57,4 @@ export default function EssayPage(): ReactNode {
     </>
   );
 }
+
