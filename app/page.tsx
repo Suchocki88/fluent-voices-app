@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import type { ReactNode } from 'react';
 
-// Waitlist form. TODO: swap for a dedicated Fluent Voices waitlist form
-// (fields: name, email, town or ZIP, genre, “could you convene a circle?”,
-//  online / in-person, and what you are working on).
+// Existing signup form retained. Recommended new fields: genre, manuscript type,
+// desired feedback, willingness to review, asynchronous/live preference, and
+// comfort reviewing AI-assisted work. Update the form separately before launch.
 const WAITLIST_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSfmC3t1awl9T0Ed1JZhtW24XEvp0znPoIITpbwcY7WvqYm12Q/viewform?usp=header';
 
@@ -12,20 +12,20 @@ const WAITLIST_URL =
    --------------------------------------------------------------- */
 
 const agenda = [
-  { time: '7:00', item: 'Arrivals, and introductions for anyone new' },
+  { time: '01', item: 'Arrivals and introductions' },
   {
-    time: '7:10',
-    item: 'Each writer’s problem — eight minutes apiece, order rotates monthly',
+    time: '02',
+    item: 'Each writer brings a craft question',
   },
-  { time: '8:00', item: 'Open craft and trade talk' },
-  { time: '8:25', item: 'What you’re bringing next month' },
+  { time: '03', item: 'Open discussion and useful next steps' },
+  { time: '04', item: 'Agree on a possible follow-up' },
 ];
 
 const circle = {
-  name: 'How a circle will run',
-  when: 'Second Thursday',
-  time: '7:00 – 8:30 PM Mountain',
-  convener: 'The first circle convenes in 2026',
+  name: 'Beyond one-to-one exchanges',
+  when: 'A possible future circle',
+  time: 'Online · Timing to be decided',
+  convener: 'Proposed format — not yet scheduled',
   seats: 'Six writers maximum',
 };
 
@@ -61,44 +61,44 @@ const novels = [
 
 const tickerWords = [
   'Craft',
-  'Company',
+  'Human readers',
   'Trade',
-  'First drafts',
+  'Honest feedback',
   'Revisions',
-  'Showing up',
+  'Creative agency',
 ];
 
 const stages = [
   {
     number: '01',
-    title: 'You join a circle',
+    title: 'Exchange a few pages',
     body: [
-      'Six writers, grouped by genre, meeting once a month online. You bring one thing you are stuck on — the scene that will not work, the character who has gone flat, the ending you cannot find.',
-      'No pages required. Most months, talking the problem through is the work.',
+      'Start small: a scene, opening chapter, synopsis, pitch, or storyboard. Tell your reader what kind of feedback would help.',
+      'We hope to introduce compatible writers for remote, asynchronous exchanges. Matches are not guaranteed; we are beginning with a small pilot.',
     ],
   },
   {
     number: '02',
-    title: 'You learn the trade',
+    title: 'Give the kind of feedback you need',
     body: [
-      'The part of writing nobody teaches: how querying actually goes, what rights you are signing away, which publishers and contests have changed their rules lately, and what disclosure they now expect.',
-      'This is changing quickly. A room that tracks it together is worth more than any of us reading the news alone.',
+      'Tell the writer where you were drawn in, confused, unconvinced, or eager to continue. Specific, independent human reactions matter more than praise.',
+      'Respect confidentiality. Never share another writer’s material or upload it to an AI service without explicit permission.',
     ],
   },
   {
     number: '03',
-    title: 'Your finished book meets readers',
+    title: 'Grow into a community',
     body: [
-      'When a member finishes, we will arrange a reading — a book club takes on the book, and the author joins the final session to answer whatever comes up.',
-      'A dozen people who read the whole thing and arrived with questions. Most first-time authors never get that once.',
+      'As more writers join, we hope to organize small online circles, conversations about craft and publishing, and eventually opportunities to connect finished books with readers.',
+      'These are aspirations, not services already operating. Early participants will help shape what comes next.',
     ],
   },
 ];
 
 const joinSteps = [
-  'Tell us what you are working on and when you could meet.',
-  'We email you as circles form for 2026 — starting with any near you.',
-  'You decide then whether it is for you.',
+  'Tell us what you write, what feedback you need, and whether you can review others.',
+  'We will contact you as suitable remote exchanges or circles become possible.',
+  'You decide whether a proposed match or group is right for you.',
 ];
 
 /* ---------------------------------------------------------------
@@ -206,20 +206,21 @@ export default function HomePage(): ReactNode {
       <header className="masthead">
         <div className="masthead-inner">
           <div className="masthead-row">
-            <p className="edition-note">Monthly · Online · Small groups</p>
+            <p className="edition-note">Human feedback · Remote exchanges · Writing circles</p>
             <p className="brand">FLUENT VOICES</p>
             <a className="masthead-action" href="#join">
               Add me to the list
             </a>
           </div>
 
-          <p className="descriptor">Writing Circles for a Changing Craft</p>
+          <p className="descriptor">Human Readers for a Changing Craft</p>
 
           <nav className="nav" aria-label="Main">
             <a href="#why">Why</a>
-            <a href="#meetings">Meetings</a>
-            <a href="#arc">What happens</a>
-            <a href="#origin">The books</a>
+            <a href="#exchange">Feedback exchange</a>
+            <a href="#arc">How it works</a>
+            <a href="/essay">The essay</a>
+              <a href="#origin">The books</a>
             <a href="#join">Join</a>
           </nav>
         </div>
@@ -227,36 +228,36 @@ export default function HomePage(): ReactNode {
 
       <main id="main">
         <h1 className="sr-only">
-          Fluent Voices — writing circles for a changing craft
+          Fluent Voices — human feedback for a changing craft
         </h1>
 
-        <section className="hero" id="meetings">
+        <section className="hero" id="exchange">
           <div>
-            <p className="eyebrow">A circle that meets</p>
+            <p className="eyebrow">A human reader matters</p>
 
             <h2>
               Writing is solitary. <em>Writers do not have to be.</em>
             </h2>
 
             <p className="hero-copy">
-              The idea is simple. Once a month, six writers sit down together and work
-              through what each of them is stuck on. Same day, same time, someone opens
-              the room. Everything else grows from that meeting.
+              AI can help you develop a manuscript. But eventually, you need another
+              human being to read it. Fluent Voices is an emerging community connecting
+              writers who want thoughtful, independent feedback — including on work
+              created with AI.
             </p>
 
             <div className="hero-actions">
               <a className="button primary" href="#join">
                 Add me to the list
               </a>
-              <a className="button secondary" href="#arc">
-                See what happens
+              <a className="button secondary" href="/essay">
+                Why human readers matter
               </a>
             </div>
 
             <p className="status-note">
-              Fluent Voices is being built now — the first circles convene in 2026, and
-              this page describes how they will run. Add your name to help start one near
-              you.
+              We are beginning with a small, remote reviewer-exchange pilot. We cannot
+              promise a match or a meeting yet. Join the interest list to help shape it.
             </p>
           </div>
 
@@ -278,8 +279,8 @@ export default function HomePage(): ReactNode {
             </ol>
 
             <p className="session-foot">
-              {circle.seats}. The link goes out to whoever has signed up.
-              <strong>Bring one problem. No pages required.</strong>
+              {circle.seats}. This is a possible future format, not a scheduled event.
+              <strong>Reviewer exchanges can begin with just two writers.</strong>
             </p>
           </aside>
         </section>
@@ -300,10 +301,10 @@ export default function HomePage(): ReactNode {
           <div className="section-heading">
             <p className="section-kicker">Why Fluent Voices</p>
             <div>
-              <h2 className="section-title">Writers need other writers.</h2>
+              <h2 className="section-title">A manuscript needs a human reader.</h2>
               <p className="section-lede">
-                Not an audience. Not a verdict. People who are working on the same
-                impossible thing and can tell you why chapter four is not landing.
+                Not automatic praise. Not a machine’s reassurance. Someone who can tell you
+                where a character feels real, where the story drags, and where they stopped believing.
               </p>
             </div>
           </div>
@@ -320,13 +321,27 @@ export default function HomePage(): ReactNode {
                 revision, or trying to work out what the trade even looks like now.
               </p>
               <p>
-                What such writers have in common is the bug — the thing where you cannot
-                not write, and you need to talk to someone who understands that without
-                requiring an explanation.
+                Some write without AI; others use it for brainstorming, revision, or drafting.
+                You do not need to defend your process here. What matters is honest craft,
+                respect for readers, and a willingness to return the favor.
               </p>
               <blockquote className="pullquote">
-                “The guild exists for the craft — and for the company of it.”
+                “AI may help you write a manuscript. Human readers help you discover whether you have written a story.”
               </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section className="section" id="essay-preview">
+          <div className="section-heading">
+            <p className="section-kicker">An essay</p>
+            <div>
+              <h2 className="section-title">The Work Is Not the Whole Story</h2>
+              <p className="section-lede">
+                AI can open a door to creativity. The finished manuscript is only part of
+                what matters — and it still needs the honest response of human readers.
+              </p>
+              <p><a className="inline-link" href="/essay">Read the essay →</a></p>
             </div>
           </div>
         </section>
@@ -335,7 +350,7 @@ export default function HomePage(): ReactNode {
           <div className="section-heading">
             <p className="section-kicker">Find your circle</p>
             <div>
-              <h2 className="section-title">There may already be one near you.</h2>
+              <h2 className="section-title">A local group may still be right for you.</h2>
               <p className="section-lede">
                 Writing circles are more common than most people realize — a great many
                 public libraries quietly host one already. Often the best circle is the
@@ -353,15 +368,13 @@ export default function HomePage(): ReactNode {
               street beats anything we can offer online.
             </p>
             <p>
-              And if there is nothing near you — nothing in your genre, nothing that fits
-              your schedule, or nowhere that meets online — that is exactly what Fluent
-              Voices is being built for. Add your name for a circle as they form, or offer
-              to start your own. You do not need to already have a group; you only need to
-              open the room, and we will help you do it.
+              If there is no welcoming group nearby — or if you need someone comfortable
+              reviewing AI-assisted work — Fluent Voices is exploring remote exchanges.
+              A thoughtful critique need not require travel or a standing meeting.
             </p>
             <div className="hero-actions">
               <a className="button primary" href="#join">Add me to the list</a>
-              <a className="button secondary" href="#arc">See how a circle runs</a>
+              <a className="button secondary" href="#arc">See how exchanges work</a>
             </div>
           </div>
         </section>
@@ -371,10 +384,10 @@ export default function HomePage(): ReactNode {
             <div className="section-heading">
               <p className="section-kicker">What happens</p>
               <div>
-                <h2 className="section-title">Your first year, roughly.</h2>
+                <h2 className="section-title">Start with a meaningful exchange.</h2>
                 <p className="section-lede">
-                  These come in order. The idea is that you spend a long time in the first
-                  one — and that is the point.
+                  Begin with selected material and honest feedback. Other possibilities can
+                  grow from those first relationships.
                 </p>
               </div>
             </div>
@@ -395,9 +408,11 @@ export default function HomePage(): ReactNode {
             </ol>
 
             <p className="arc-note">
-              You can also add a finished book to the guild’s reading list, which is how
-              book clubs find work to take on. It is a list, not a storefront — sharing is
-              optional, and you keep every right to your own work.
+              A simple exchange should begin with mutual expectations: share only material
+              you choose, keep others’ work private, do not redistribute or feed it into
+              AI without permission, and give specific, respectful criticism. Credit for
+              reviewers is optional and requires their consent. We are not a publisher,
+              rights manager, or guarantor of confidentiality.
             </p>
           </div>
         </section>
@@ -411,14 +426,14 @@ export default function HomePage(): ReactNode {
             <p>
               The tools will keep changing. At the heart of every story is a human
               experience, and finding the means to polish that story until it shines is
-              what the circles are for.
+              why human feedback matters.
             </p>
           </div>
         </section>
 
         <section className="origin-section" id="origin">
           <p className="origin-plate">
-            From Conceptual Academy, publishers of
+            From Conceptual Academy, publishers of{' '}
             <em>Understanding and Working with AI</em>
           </p>
 
@@ -426,7 +441,7 @@ export default function HomePage(): ReactNode {
             <div className="section-heading">
               <p className="section-kicker">Origins</p>
               <div>
-                <h2 className="section-title">The books behind the circles.</h2>
+                <h2 className="section-title">The books behind the idea.</h2>
                 <p className="section-lede">
                   Fluent Voices grew out of a two-volume program that asks its readers to
                   finish something — and out of two novels written to find out whether the
@@ -450,7 +465,7 @@ export default function HomePage(): ReactNode {
                   ))}
                 </ul>
                 <p className="shelf-note">
-                  Volume 2 closes by inviting adult readers here, manuscript in hand.{' '}
+                  Our AI literacy program invites writers to examine both the work they create and what they learn in creating it.{' '}
                   <a className="inline-link" href="https://understandingai.ai">
                     See the program at UnderstandingAI.ai
                   </a>
@@ -472,7 +487,7 @@ export default function HomePage(): ReactNode {
                 </ul>
                 <p className="shelf-note">
                   Two novels written to test whether the work would hold — and the reason
-                  the circles exist at all.
+                  Fluent Voices began.
                 </p>
               </div>
             </div>
@@ -483,7 +498,7 @@ export default function HomePage(): ReactNode {
           <div className="join-card">
             <div className="join-copy">
               <p className="eyebrow">Join</p>
-              <h2>Bring the work. Find your people.</h2>
+              <h2>Bring your work. Find a human reader.</h2>
 
               <ol className="join-steps">
                 {joinSteps.map((step) => (
@@ -501,19 +516,19 @@ export default function HomePage(): ReactNode {
               </a>
 
               <p className="status-note">
-                Fluent Voices is just getting started — the first circles form in 2026.
-                Add your name, and you will be among the first we reach out to as circles
-                take shape near you. We will also tell you if there is already one nearby.
-                Early voices help shape what this becomes.
+                Fluent Voices is at the pilot stage. We will contact interested writers if a
+                suitable exchange or online circle becomes possible. Signing up does not
+                guarantee a match or a meeting. Early voices will help shape the project.
               </p>
               <p>
                 No writing sample, no publication history, no finished manuscript. If you
                 are working on something, you belong here.
               </p>
               <p>
-                Every circle will have a convener — someone who keeps the standing time
-                and opens the room. If you would like to convene one of your own, say so
-                and we will help you start it.
+                When you sign up, please tell us your genre, what material you want reviewed,
+                whether you can review someone else’s work, and whether you prefer
+                exchanging comments asynchronously or meeting online. The current form
+                may not yet ask all of these questions; you can include them in its notes.
               </p>
               <p className="join-support">
                 Fluent Voices is free to join. It is supported by Conceptual Academy, the
@@ -534,7 +549,7 @@ export default function HomePage(): ReactNode {
         <div className="footer-inner">
           <div>
             <p className="footer-brand">FLUENT VOICES</p>
-            <p className="footer-copy">Writing Circles for a Changing Craft</p>
+            <p className="footer-copy">Human Readers for a Changing Craft</p>
             <p className="footer-origin">
               From Conceptual Academy, publishers of{' '}
               <a className="inline-link" href="https://understandingai.ai">
@@ -552,8 +567,9 @@ export default function HomePage(): ReactNode {
             />
             <nav className="footer-links" aria-label="Footer">
               <a href="#why">Why</a>
-              <a href="#meetings">Meetings</a>
-              <a href="#arc">What happens</a>
+              <a href="#exchange">Feedback exchange</a>
+              <a href="#arc">How it works</a>
+              <a href="/essay">The essay</a>
               <a href="#origin">The books</a>
               <a href="#join">Join</a>
             </nav>
