@@ -201,13 +201,24 @@ export default function HomePage(): ReactNode {
         Skip to content
       </a>
 
+      <style>{`
+        .masthead .brand { font-size: clamp(42px, 5.1vw, 76px) !important; line-height: 1.05 !important; }
+        .hero h2 { font-size: clamp(42px, 4.2vw, 68px) !important; line-height: 1.08 !important; }
+        .section-title, .join-copy h2 { font-size: clamp(34px, 3.15vw, 50px) !important; line-height: 1.12 !important; }
+        @media (max-width: 600px) {
+          .masthead .brand { font-size: clamp(32px, 9vw, 48px) !important; }
+          .hero h2 { font-size: clamp(38px, 9vw, 52px) !important; }
+          .section-title, .join-copy h2 { font-size: clamp(30px, 7.4vw, 40px) !important; }
+        }
+      `}</style>
+
       <div className="top-strip" />
 
       <header className="masthead">
         <div className="masthead-inner">
           <div className="masthead-row">
             <p className="edition-note">Human feedback · Remote exchanges · Writing circles</p>
-            <p className="brand">FLUENT VOICES</p>
+            <p className="brand" style={{ fontSize: "clamp(42px, 5.1vw, 76px)", lineHeight: 1.05 }}>FLUENT VOICES</p>
             <a className="masthead-action" href="#join">
               Add me to the list
             </a>
@@ -235,7 +246,7 @@ export default function HomePage(): ReactNode {
           <div>
             <p className="eyebrow">A human reader matters</p>
 
-            <h2 style={{ fontSize: "clamp(2.7rem, 5.5vw, 5.5rem)", lineHeight: 1.08 }}>
+            <h2 style={{ fontSize: "clamp(42px, 4.2vw, 68px)", lineHeight: 1.08 }}>
               Writing is solitary. <em>Writers do not have to be.</em>
             </h2>
 
@@ -301,7 +312,7 @@ export default function HomePage(): ReactNode {
           <div className="section-heading">
             <p className="section-kicker">Why Fluent Voices</p>
             <div>
-              <h2 className="section-title" style={{ fontSize: "clamp(2.1rem, 4vw, 3.7rem)", lineHeight: 1.12 }}>A manuscript needs a human reader.</h2>
+              <h2 className="section-title" style={{ fontSize: "clamp(34px, 3.15vw, 50px)", lineHeight: 1.12 }}>A manuscript needs a human reader.</h2>
               <p className="section-lede">
                 Not automatic praise. Not a machine’s reassurance. Someone who can tell you
                 where a character feels real, where the story drags, and where they stopped believing.
@@ -336,7 +347,7 @@ export default function HomePage(): ReactNode {
           <div className="section-heading">
             <p className="section-kicker">An essay</p>
             <div>
-              <h2 className="section-title" style={{ fontSize: "clamp(2.1rem, 4vw, 3.7rem)", lineHeight: 1.12 }}>The Work Is Not the Whole Story</h2>
+              <h2 className="section-title" style={{ fontSize: "clamp(34px, 3.15vw, 50px)", lineHeight: 1.12 }}>The Work Is Not the Whole Story</h2>
               <p className="section-lede">
                 AI can open a door to creativity. The finished manuscript is only part of
                 what matters — and it still needs the honest response of human readers.
@@ -350,7 +361,7 @@ export default function HomePage(): ReactNode {
           <div className="section-heading">
             <p className="section-kicker">Find your circle</p>
             <div>
-              <h2 className="section-title" style={{ fontSize: "clamp(2.1rem, 4vw, 3.7rem)", lineHeight: 1.12 }}>A local group may still be right for you.</h2>
+              <h2 className="section-title" style={{ fontSize: "clamp(34px, 3.15vw, 50px)", lineHeight: 1.12 }}>A local group may still be right for you.</h2>
               <p className="section-lede">
                 Writing circles are more common than most people realize — a great many
                 public libraries quietly host one already. Often the best circle is the
@@ -384,7 +395,7 @@ export default function HomePage(): ReactNode {
             <div className="section-heading">
               <p className="section-kicker">What happens</p>
               <div>
-                <h2 className="section-title" style={{ fontSize: "clamp(2.1rem, 4vw, 3.7rem)", lineHeight: 1.12 }}>Start with a meaningful exchange.</h2>
+                <h2 className="section-title" style={{ fontSize: "clamp(34px, 3.15vw, 50px)", lineHeight: 1.12 }}>Start with a meaningful exchange.</h2>
                 <p className="section-lede">
                   Begin with selected material and honest feedback. Other possibilities can
                   grow from those first relationships.
@@ -441,7 +452,7 @@ export default function HomePage(): ReactNode {
             <div className="section-heading">
               <p className="section-kicker">Origins</p>
               <div>
-                <h2 className="section-title" style={{ fontSize: "clamp(2.1rem, 4vw, 3.7rem)", lineHeight: 1.12 }}>The books behind the idea.</h2>
+                <h2 className="section-title" style={{ fontSize: "clamp(34px, 3.15vw, 50px)", lineHeight: 1.12 }}>The books behind the idea.</h2>
                 <p className="section-lede">
                   Fluent Voices grew out of a two-volume program that asks its readers to
                   finish something — and out of two novels written to find out whether the
@@ -498,7 +509,7 @@ export default function HomePage(): ReactNode {
           <div className="join-card">
             <div className="join-copy">
               <p className="eyebrow">Join</p>
-              <h2 style={{ fontSize: "clamp(2.1rem, 4vw, 3.7rem)", lineHeight: 1.12 }}>Bring your work. Find a human reader.</h2>
+              <h2 style={{ fontSize: "clamp(34px, 3.15vw, 50px)", lineHeight: 1.12 }}>Bring your work. Find a human reader.</h2>
 
               <ol className="join-steps">
                 {joinSteps.map((step) => (
