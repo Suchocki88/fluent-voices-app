@@ -1,132 +1,97 @@
+/* eslint-disable @next/next/no-img-element */
+import type { ReactNode } from 'react';
 
-    
-  
-                </p>
-              </div>
-            </div>
+// Existing signup form retained. Recommended new fields: genre, manuscript type,
+// desired feedback, willingness to review, asynchronous/live preference, and
+// comfort reviewing AI-assisted work. Update the form separately before launch.
+const WAITLIST_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSfmC3t1awl9T0Ed1JZhtW24XEvp0znPoIITpbwcY7WvqYm12Q/viewform?usp=header';
 
-            <div className="shelf-grid">
-              <div className="shelf-group">
-                <p className="shelf-label">The program</p>
-                <ul className="covers">
-                  {programBooks.map((book) => (
-                    <li key={book.title}>
-                      <span className="cover-frame">
-                        <img src={book.src} alt={book.alt} />
-                      </span>
-                      <p className="cover-title">{book.title}</p>
-                      <p className="cover-subtitle">{book.subtitle}</p>
-                    </li>
-                  ))}
-                </ul>
-                <p className="shelf-note">
-                  Our AI literacy program invites writers to examine both the work they create and what they learn in creating it.{' '}
-                  <a className="inline-link" href="https://understandingai.ai">
-                    See the program at UnderstandingAI.ai
-                  </a>
-                </p>
-              </div>
+/* ---------------------------------------------------------------
+   Content
+   --------------------------------------------------------------- */
 
-              <div className="shelf-group">
-                <p className="shelf-label">Where it started</p>
-                <ul className="covers">
-                  {novels.map((book) => (
-                    <li key={book.title}>
-                      <span className="cover-frame">
-                        <img src={book.src} alt={book.alt} />
-                      </span>
-                      <p className="cover-title">{book.title}</p>
-                      <p className="cover-subtitle">{book.subtitle}</p>
-                    </li>
-                  ))}
-                </ul>
-                <p className="shelf-note">
-                  Two novels written to test whether the work would hold — and the reason
-                  Fluent Voices began.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+const agenda = [
+  { time: '01', item: 'Arrivals and introductions' },
+  {
+    time: '02',
+    item: 'Each writer brings a craft question',
+  },
+  { time: '03', item: 'Open discussion and useful next steps' },
+  { time: '04', item: 'Agree on a possible follow-up' },
+];
 
-        <section className="join-section" id="join">
-          <div className="join-card">
-            <div className="join-copy">
-              <p className="eyebrow">Join</p>
-              <h2 style={{ fontSize: "clamp(2.1rem, 4vw, 3.7rem)", lineHeight: 1.12 }}>Bring your work. Find a human reader.</h2>
+const circle = {
+  name: 'Beyond one-to-one exchanges',
+  when: 'A possible future circle',
+  time: 'Online · Timing to be decided',
+  convener: 'Proposed format — not yet scheduled',
+  seats: 'Six writers maximum',
+};
 
-              <ol className="join-steps">
-                {joinSteps.map((step) => (
-                  <li key={step}>{step}</li>
-                ))}
-              </ol>
+const programBooks = [
+  {
+    src: '/images/UAIVol1Cover605.jpg',
+    alt: 'Understanding and Working with AI, Volume 1: Foundations and Practice',
+    title: 'Volume 1',
+    subtitle: 'Foundations and Practice',
+  },
+  {
+    src: '/images/UAIVol2Cover605.jpg',
+    alt: 'Understanding and Working with AI, Volume 2: Society and the Future',
+    title: 'Volume 2',
+    subtitle: 'Society and the Future',
+  },
+];
 
-              <a
-                className="button primary"
-                href={WAITLIST_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Add me to the list
-              </a>
+const novels = [
+  {
+    src: '/images/ThresholdHi.jpg',
+    alt: 'The Threshold, a novel by John Suchocki and Claude',
+    title: 'The Threshold',
+    subtitle: 'The Future of AI and Humanity',
+  },
+  {
+    src: '/images/NeolithicHi.jpg',
+    alt: 'The Neolithic, a novel by John Suchocki and Claude',
+    title: 'The Neolithic',
+    subtitle: 'Echoes of Our Origins',
+  },
+];
 
-              <p className="status-note">
-                Fluent Voices is at the pilot stage. We will contact interested writers if a
-                suitable exchange or online circle becomes possible. Signing up does not
-                guarantee a match or a meeting. Early voices will help shape the project.
-              </p>
-              <p>
-                No writing sample, no publication history, no finished manuscript. If you
-                are working on something, you belong here.
-              </p>
-              <p>
-                When you sign up, please tell us your genre, what material you want reviewed,
-                whether you can review someone else’s work, and whether you prefer
-                exchanging comments asynchronously or meeting online. The current form
-                may not yet ask all of these questions; you can include them in its notes.
-              </p>
-              <p className="join-support">
-                Fluent Voices is free to join. It is supported by Conceptual Academy, the
-                public benefit corporation behind the AI-Ed program.
-              </p>
-            </div>
+const tickerWords = [
+  'Craft',
+  'Human readers',
+  'Trade',
+  'Honest feedback',
+  'Revisions',
+  'Creative agency',
+];
 
-            <div className="join-art">
-              <div className="join-mark">
-                <QuillMark />
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <div>
-            <p className="footer-brand">FLUENT VOICES</p>
-            <p className="footer-copy">Human Readers for a Changing Craft</p>
-            <p className="footer-origin">
-              From Conceptual Academy, publishers of{' '}
-              <a className="inline-link" href="https://understandingai.ai">
-                <em>Understanding and Working with AI</em>
-              </a>
-              .
-            </p>
-          </div>
-
-          <div className="footer-right">
-            <img
-              className="footer-logo"
-              src="/images/Logo1200Horizontal.png"
-              alt="Conceptual Academy"
-            />
-            <nav className="footer-links" aria-label="Footer">
-              <a href="#why">Why</a>
-              <a href="#exchange">Feedback exchange</a>
-              <a href="#arc">How it works</a>
-              <a href="/essay">The essay</a>
-              <a href="#origin">The books</a>
-              <a href="#join">Join</a>
-            </nav>
-          </div>
+const stages = [
+  {
+    number: '01',
+    title: 'Exchange a few pages',
+    body: [
+      'Start small: a scene, opening chapter, synopsis, pitch, or storyboard. Tell your reader what kind of feedback would help.',
+      'We hope to introduce compatible writers for remote, asynchronous exchanges. Matches are not guaranteed; we are beginning with a small pilot.',
+    ],
+  },
+  {
+    number: '02',
+    title: 'Give the kind of feedback you need',
+    body: [
+      'Tell the writer where you were drawn in, confused, unconvinced, or eager to continue. Specific, independent human reactions matter more than praise.',
+      'Respect confidentiality. Never share another writer’s material or upload it to an AI service without explicit permission.',
+    ],
+  },
+  {
+    number: '03',
+    title: 'Grow into a community',
+    body: [
+      'As more writers join, we hope to organize small online circles, conversations about craft and publishing, and eventually opportunities to connect finished books with readers.',
+      'These are aspirations, not services already operating. Early participants will help shape what comes next.',
+    ],
+  },
+];
 
